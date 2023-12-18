@@ -21,6 +21,8 @@ yn1 = expand(simplify(yn1));
 disp('欧拉公式的化简结果为:');
 disp(yn1);
 
+sympref('FloatingPointOutput', 'default');
+
 y(1) = y0;
 for k = 2:length(x)
     y(k) = subs(yn1, [xn, yn], [x(k-1), y(k-1)]);
